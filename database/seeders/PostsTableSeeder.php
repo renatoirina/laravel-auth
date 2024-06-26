@@ -19,7 +19,7 @@ class PostsTableSeeder extends Seeder
             $newPost = new Post();
             $newPost->title = $faker->sentence(3);
             $newPost->content = $faker->text(500);
-            //slug è il metodo della classe str che trasforma la stringa data in uno slug
+
             $newPost->slug = Str::slug($newPost->title);
             $newPost->save();
         }
